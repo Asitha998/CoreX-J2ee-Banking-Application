@@ -1,0 +1,316 @@
+body {
+    font-family: 'Inter', sans-serif;
+    /* Dark background with a subtle gradient */
+    background: linear-gradient(135deg, #1A1A1A 0%, #0A0A0A 100%);
+    color: #E0E0E0; /* Light text for dark background */
+}
+
+/* Styling for the login card container */
+.login-card {
+    background-color: rgba(25, 25, 25, 0.9); /* Darker, slightly transparent */
+    backdrop-filter: blur(8px); /* Stronger frosted glass effect */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: 1px solid rgba(50, 50, 50, 0.7); /* Subtle dark border */
+}
+
+/* Hover effect for the login card */
+.login-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Input group styling */
+.input-group input {
+    padding-left: 2.5rem; /* Space for icon */
+    background-color: #2A2A2A; /* Darker input background */
+    color: #E0E0E0; /* Light text in input */
+    border-color: #444444; /* Darker border for inputs */
+}
+
+/* Placeholder text color for inputs */
+.input-group input::placeholder {
+    color: #888888; /* Lighter placeholder text */
+}
+
+/* Focus state for input fields */
+.input-group input:focus {
+    border-color: #D4AF37; /* Gold border on focus */
+    box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.5); /* Gold ring on focus */
+}
+
+/* Icon positioning within input groups */
+.input-group .icon {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #D4AF37; /* Gold icon color */
+}
+
+/* Primary button styling */
+.btn-primary {
+    /* Gold to dark gradient for button */
+    background: linear-gradient(45deg, #D4AF37, #A67C00);
+    color: #1A1A1A; /* Dark text on gold button */
+    transition: all 0.3s ease;
+}
+
+/* Primary button hover effect */
+.btn-primary:hover {
+    /* Reverse gradient on hover */
+    background: linear-gradient(45deg, #A67C00, #D4AF37);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4); /* Gold shadow on hover */
+}
+
+/* Specific text colors */
+.text-gold {
+    color: #D4AF37; /* Gold color for text */
+}
+
+.text-light-gray {
+    color: #E0E0E0; /* Light gray for general text */
+}
+
+.text-medium-gray {
+    color: #B0B0B0; /* Medium gray for secondary text */
+}
+
+.text-dark-gray {
+    color: #888888; /* Dark gray for subtle text */
+}
+
+.bg-gold {
+    background-color: #D4AF37; /* Gold color for background */
+}
+
+.bg-clear {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+/* Error message styling for dark theme */
+.error-message {
+    background-color: rgba(128, 0, 0, 0.5); /* Dark red background */
+    border-color: #FF6347; /* Tomato red border */
+    color: #FFDAB9; /* Peach puff text */
+}
+
+/* Card styling for dashboards and forms */
+.content-card {
+    background-color: rgba(25, 25, 25, 0.9);
+    border: 1px solid rgba(50, 50, 50, 0.7);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Table styling for dark theme */
+.table-header {
+    background-color: #2A2A2A; /* Darker header background */
+    color: #D4AF37; /* Gold text for headers */
+}
+
+.table-row {
+    border-color: #3A3A3A; /* Darker row border */
+}
+
+.table-row:hover {
+    background-color: #2A2A2A; /* Darker hover background */
+}
+
+.table-cell {
+    color: #E0E0E0; /* Light text for table cells */
+}
+
+/* Success/Positive text (e.g., balance) */
+.text-success {
+    color: #3CB371; /* Medium Sea Green */
+}
+
+/* Info/Neutral text (e.g., roles) */
+.text-info {
+    background-color: rgba(212, 175, 55, 0.2); /* Light gold background */
+    color: #D4AF37; /* Gold text */
+}
+
+/*createAccount cssc*/
+.page-container {
+    /* This is the main card that holds both sides */
+    background-color: rgba(25, 25, 25, 0.95); /* Base dark background */
+    border: 1px solid rgba(50, 50, 50, 0.8);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); /* Main card shadow */
+    border-radius: 1.5rem;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.page-container:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
+}
+
+.image-side {
+    background: linear-gradient(135deg, #A67C00 0%, #D4AF37 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*padding: 3rem;*/
+    flex-shrink: 0;
+    position: relative;
+}
+
+.image-side svg {
+    width: 180px;
+    height: 180px;
+    color: rgba(26, 26, 26, 0.7);
+    filter: drop-shadow(0 8px 15px rgba(0, 0, 0, 0.4));
+}
+
+.form-side {
+    background-color: #121212;
+    padding: 2.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Key styles for the "popped up" effect */
+    box-shadow: -8px 0 20px rgba(0, 0, 0, 0.4); /* Shadow on the left to make it pop */
+    position: relative; /* Ensure shadow is rendered correctly */
+    z-index: 1; /* Ensure it's above the image side if overlaps occur */
+}
+
+/* Adjust border-radius for mobile (stacks vertically) */
+@media (max-width: 768px) {
+    .page-container {
+        flex-direction: column;
+    }
+
+    .image-side {
+        border-radius: 1.5rem 1.5rem 0 0;
+    }
+
+    .form-side {
+        border-radius: 0 0 1.5rem 1.5rem;
+        box-shadow: 0 -8px 20px rgba(0, 0, 0, 0.4); /* Shadow on top for mobile stack */
+    }
+}
+
+/* Adjust border-radius for desktop (side-by-side) */
+@media (min-width: 769px) {
+    .image-side {
+        border-radius: 1.5rem 0 0 1.5rem;
+    }
+
+    .form-side {
+        border-radius: 0 1.5rem 1.5rem 0;
+    }
+}
+
+
+/*toggle switch*/
+/** {*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    box-sizing: border-box;*/
+/*    -webkit-tap-highlight-color: transparent;*/
+/*    outline: 1px solid transparent;*/
+/*}*/
+
+.toggle-wrapper {
+    display: inline-block;
+    position: relative;
+    border-radius: 3.125em;
+    overflow: hidden;
+}
+
+.toggle-checkbox {
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    border-radius: inherit;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.toggle-container {
+    display: flex;
+    position: relative;
+    border-radius: inherit;
+    width: 2.5em;
+    height: 1.25em;
+    background-color: #909197;
+    box-shadow: inset .0625em 0 0 #d4d2de,
+    inset -.0625em 0 0 #d4d2de,
+    inset .125em .25em .125em .25em #9797a3;
+    mask-image: radial-gradient(#fff, #000);
+    transition: all .4s;
+}
+
+/* Green active state */
+.toggle-wrapper.green > .toggle-checkbox:checked + .toggle-container {
+    background-color: #218544; /* green-400 */
+    box-shadow: inset .0625em 0 0 #4ade80,
+    inset -.0625em 0 0 #4ade80,
+    inset .125em .25em .125em .25em #1f8f47; /* green-500 */
+}
+
+.toggle-ball {
+    position: relative;
+    border-radius: 50%;
+    width: 1.25em;
+    height: 1.25em;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0) 16%),
+    radial-gradient(#d2d4dc, #babac2);
+    background-position: -.25em -.25em;
+    background-size: auto, calc(100% + .25em) calc(100% + .25em);
+    background-repeat: no-repeat;
+    box-shadow: .25em .25em .25em #8d889e,
+    inset .0625em .0625em .25em #d1d1d6,
+    inset -.0625em -.0625em .25em #8c869e;
+    transition: transform .4s, box-shadow .4s;
+}
+
+.toggle-ball::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    background-position: -.25em -.25em;
+    background-size: auto, calc(100% + .25em) calc(100% + .25em);
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity .4s;
+}
+
+/* Green ball effect */
+.toggle-wrapper.green > .toggle-container > .toggle-ball::after {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0) 16%),
+    radial-gradient(#4ade80, #22c55e);
+    box-shadow: .25em .25em .25em #166534,
+    inset .0625em .0625em .25em #bbf7d0,
+    inset -.0625em -.0625em .25em #14532d;
+}
+
+/* Animate ball position and fade glow */
+.toggle-checkbox:checked + .toggle-container > .toggle-ball {
+    transform: translateX(100%);
+}
+
+.toggle-checkbox:checked + .toggle-container > .toggle-ball::after {
+    opacity: 1;
+}
+
+.text-blue{
+    color: #1E90FF; /* Dodger Blue */
+}
+
+div{
+    border: rgba(10, 10, 10, 0);
+
+}
+
