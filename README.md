@@ -23,9 +23,9 @@
 - **User Registration & Login**
 - **Role-Based Access Control** (`ADMIN`, `USER`)
 - **OTP-verified Fund Transfers**
-- **Scheduled Transfers** (DAILY, WEEKLY, MONTHLY, YEARLY, ONETIME)
+- **Scheduled Transfers** (DAILY, WEEKLY, MONTHLY, YEARLY, ONCE)
 - **Monthly Interest Calculation for Savings Accounts**
-- **Balance Summary Reports via Email**
+- **Daily Balance Summary Reports via Email**
 - **Secure Transaction Logs**
 
 ### 🔐 Security
@@ -59,7 +59,7 @@
 - MySQL / H2
 - JSP + JSTL (frontend)
 - Maven EAR multi-module build
-- JavaMail for OTP and daily balance reporting
+- JavaMail(MailTrap) for OTP and daily balance reporting
 
 ---
 
@@ -70,17 +70,8 @@
    - JDBC connection pool & datasource (MySQL/H2)
    - Mail resource for SMTP (for OTP & reports)
 3. Build and deploy the EAR project.
-4. Access via: `http://localhost:8080/web/`
+4. Access via: `http://localhost:8080/corex/`
 
 ---
 
-## 📧 Contact
-
-For any queries or support, reach out to:
-
-> **Developer**: Eldu Primo  
-> **Email**: eldu@example.com  
-> **Project**: CoreX Banking System
-
----
 
